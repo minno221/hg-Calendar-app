@@ -26,6 +26,7 @@ export default async function handler(req, res) {
       date,
       name: name.trim(),
       type, // 'event' | 'exam' | 'break'
+      source: 'manual',
     };
     list.push(entry);
     await kv.set(KEY, list);
